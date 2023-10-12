@@ -3,6 +3,10 @@ function generateRandomNumber(min, max) {
     
 }
 
+function isEven(num) {
+    return num % 2 == 0
+}
+
 const userChoice = prompt('Pari o dispari?')
 console.log(userChoice)
 
@@ -15,15 +19,15 @@ console.log('bot num ' + botNum);
 const sumNum = parseInt(userNum) + botNum
 console.log(sumNum);
 
-console.log('sumNum % 2 = ' + sumNum % 2);
+console.log('sumNum % 2 == 0 = ' + isEven(sumNum));
 
-if (sumNum % 2 == 0) {
+if (isEven(sumNum)) {
     console.log('userChoice.toLowerCase() = ' + userChoice.toLowerCase())
 
     if (userChoice.toLowerCase() === 'pari') {
         console.log('YEEEEEE');
     } else if (userChoice.toLowerCase() === 'dispari') {
-        console.log('NOOOOOOOUUU CLEOURRRR');
+        console.log('NOOOOOOOUUU CLEOORRRR');
     }
 } else {
     console.log('userChoice.toLowerCase() = ' + userChoice.toLowerCase())
@@ -31,6 +35,6 @@ if (sumNum % 2 == 0) {
     if (userChoice.toLowerCase() === 'dispari') {
         console.log('YEEEEEE');
     } else if (userChoice.toLowerCase() === 'pari') {
-        console.log('NOOOOOOOUUU CLEOURRRR');
+        console.log('NOOOOOOOUUU CLEOORRRR');
     }
 }
