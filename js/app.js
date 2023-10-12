@@ -19,6 +19,7 @@ const word = prompt('Inserire una parola');
 // }
 
 function isPalindromo(word) {
+    word = word.toLowerCase()
     let firstChar = 0;
     let lastChar = word.length - 1;
     let charPali = true;
